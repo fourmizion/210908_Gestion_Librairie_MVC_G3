@@ -9,7 +9,7 @@
 
 
         <div class="headerNav">
-        <?php if(isset($_SESSION['Statut'])): ?>
+
          <nav class="navbar">
                 <div class="navElement">
                     <a href="?controller=home&action=home"> Accueil</a>
@@ -49,7 +49,6 @@
             </nav>
         </div>
             
-        <?php endif; ?>
 
         
         <div class="headerNav">
