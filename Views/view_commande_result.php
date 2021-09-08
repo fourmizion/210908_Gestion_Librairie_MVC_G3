@@ -19,8 +19,8 @@
 <?php foreach($commandes as $donnees): ?>
 
         <td> <?= $donnees['Id_commande'] ?></td>
-        <td> <?= $donnees['Id_Livre'] ?></td>
-        <td> <?= $donnees['Id_fournisseur'] ?></td>
+        <td> <?= $donnees['Editeur'] ?></td>
+        <td> <?= $donnees['Raison_sociale'] ?></td>
         <td> <?= $donnees['Date_achat'] ?></td>
         <td> <?= $donnees['Prix_achat'] ?></td>
         <td> <?= $donnees['Nbr_exemplaires'] ?></td>
