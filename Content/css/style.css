@@ -351,7 +351,16 @@ legend{
     flex-direction: column;
     justify-content: space-around;
 }
-h2{
+.titreh2Fournisseur{
+    font-family: 'Glory';
+    color:#ba2b2e;
+    font-size: 18px;
+    height: 40px;
+    overflow-y:auto;
+    margin: 15px 0 0 0;
+    padding: 0 5px;
+}
+.titreh2{
     color:#ba2b2e;
     font-size: 25px;
     height: 40px;
