@@ -24,7 +24,7 @@
             <div class="flex">
                 <div class="imageLarge"></div>  
                 <div class="titre">
-                    <div class="titreh2"><h2><?= $donnees['Raison_sociale'] ?></h2></div>
+                    <div class="titreh2Fournisseur"><h2><?= $donnees['Raison_sociale'] ?></h2></div>
                     
                     <div class="details">
                         <div class="box1">
