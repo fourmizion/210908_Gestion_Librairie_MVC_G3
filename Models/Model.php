@@ -130,7 +130,7 @@ class Model
 
     public function get_commande_result()
     {
-        $requete = $this->bd->prepare("SELECT * FROM commandes");
+        $requete = $this->bd->prepare("SELECT * FROM livres, fournisseurs, commandes WHERE livres.id_Livre=commandes.Id_Livre AND fournisseurs.Id_fournisseur=commandes.Id_fournisseur");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
