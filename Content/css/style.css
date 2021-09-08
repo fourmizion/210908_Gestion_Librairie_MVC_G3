@@ -1,0 +1,817 @@
+/* ____________________ Initialisation ____________________ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #eee;
+    color: #111;
+    font-size: 20px;
+    /* padding-top: 70px; */
+}
+@font-face {
+    font-family: "Parisienne";
+    src: url("../fonts/Parisienne-Regular.ttf") format("ttf"),
+           url("../font/Parisienne-Regular.ttf") format("ttf");
+   }
+   @font-face {
+    font-family: "Glory";
+    src: url("../font/static/Glory-Regular.ttf") format("ttf"),
+           url("../font/static/Glory-Regular.ttf") format("ttf");
+   }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #111;
+}
+
+
+/* ____________________ Header ____________________ */
+header.header {
+    width: 100%;
+    position: fixed;
+    background-color: #eee;
+    box-shadow: 0 0 5px rgba(34, 34, 34, 0.707);
+}
+
+header.header div.headerTop {
+    width: 1280px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+div.headerLogo {
+    display: flex;
+    align-items: center;
+}
+
+header.header div.headerLogo img {
+    height: 50px;
+}
+
+header.header div.headerPanier {
+    display: flex;
+}
+
+header.header div.headerPanier img {
+    height: 25px;
+    padding: 0 0 0 5px;
+}
+
+header.header div.headerBottom {
+    width: 100%;
+}
+
+header.header div.headerBanner img {
+    width: 100%;
+}
+
+div.headerBottom
+{
+    margin-bottom: 40px;
+    padding-top: 70px ;
+}
+
+.headerBanner{
+    background-image: url('../images/banniere_bibliothequejcomb.jpg');
+    height: 501px;
+    display: flex;
+}
+
+
+
+/* ___________________________ HEADER _____________________________ */
+/* _______________________________________________________________ */
+/* ___________________________ BURGER ___________________________ */
+
+/* ____________________ BOUTON */
+
+div.burger label 
+{
+    display: none;
+    user-select: none;
+
+    padding: 5px 10px;
+    border: 2px solid  #222;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+
+    transition: all;
+    transition-duration: 0.3s;
+
+    z-index: 1000;
+}
+
+div.burger label:hover 
+{
+    background-color: #333;
+    color: #fff;
+    transition-duration: 0.3s;
+}
+
+/* ______________________________ CHECKBOX */
+
+div.burger input[type="checkbox"]
+{
+    position: absolute;
+    opacity: 0%;
+    top: 0px;
+
+}
+
+/* ______________________________ NAVBAR */
+div.burgerNav 
+{
+    display: none;
+    width: 300px;
+    position: absolute;
+    transform: translateX(500px);
+    top: 60px;
+    border-top: 2px solid black ;
+    background-color: #fff;
+    transition-property: all;
+    transition-duration: 0.1s;
+}
+
+div.burger input[type="checkbox"]:checked + div.burgerNav 
+{
+    transform: translateX(-200px);
+    right: -200px;
+}
+
+div.burgerNav div.navElement ul
+{
+    position: relative;
+}
+
+div.burgerNav div.navElement ul li
+{
+    padding: auto 0px;
+}
+
+div.burgerNav div.navElement ul li:hover
+{
+    background-color: #f8f8f8;
+}
+
+/* ___________________________ BURGER _____________________________ */
+/* _______________________________________________________________ */
+/* ____________________ Boutons consultation ____________________ */
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: baseline;
+    width: 30%;
+}
+
+div.navElement {
+    padding: 10px 20px;
+}
+
+div.navElement p:hover {
+    cursor: default;
+}
+
+div.navElement ul{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    border-top: 2px solid black;
+    background-color: #fff;
+    padding: 5px 0px;
+}
+
+div.navElement ul a {
+    color: #222;
+    padding: 5px 15px;
+}
+
+div.navElement ul a:hover {
+    text-decoration: underline;
+}
+
+div.navElement:hover ul
+{
+    display: block;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0px auto 20px auto;
+}
+
+/* ___________________________ Boutons consultation _____________________________ */
+/* _____________________________________________________________________________ */
+/* __________________________________ Main ____________________________________ */
+
+main.main 
+{
+    width: 100%;
+    min-height: 85vh;
+    background-color: #e8e8e8;
+}
+
+div.mainBack 
+{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+div.mainGrid
+{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 800px;
+}
+
+div.newsGrid
+{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    background-size: cover;
+}
+
+div.newsElement
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+div.newsTitle
+{
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.77);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+div.newsElement:hover div.newsTitle
+{
+    background-color: rgba(0, 0, 0, 0.81);
+}
+
+div.newsElement:nth-child(1){background-image: url(../images/news1.jpg); background-size: cover;}
+div.newsElement:nth-child(2){background-image: url(../images/news2.jpg); background-size: cover;}
+div.newsElement:nth-child(3){background-image: url(../images/news3.jpg); background-size: cover;}
+div.newsElement:nth-child(4){background-image: url(../images/news4.jpg); background-size: cover;}
+
+div.twitterElement
+{
+    height: 800px;
+    overflow-y: scroll;
+}
+
+
+/* ___________________________ Boutons consultation _____________________________ */
+/* _____________________________________________________________________________ */
+/* __________________________________ Table ____________________________________ */
+table{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px 15px;
+}
+
+th{
+    background-color: #ba2b2e;
+    color: #ddd;
+}
+
+td {
+    background-color: #ddd;
+    color: #222;
+}
+
+
+
+/* ________________________ Table ______________________ */
+/* ____________________________________________________ */
+/* ________________________ Result ___________________ */
+
+/* Affichage livre */
+.titreh1{
+    text-align: center;
+    color: #ba2b2e;
+    margin: 0 0 20px 0;
+}
+.ajust{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1280px;
+    margin: 0px auto;
+
+}
+
+fieldset{
+    width: 300px;
+    padding: 15px;
+    border: none;
+    box-shadow: 1px 1px 5px #05112165;
+    border-radius: 10px;
+    margin: 0 0 25px 0;
+}
+legend{
+    font-size: 0.6em;
+}
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.titre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h2{
+    color:#ba2b2e;
+    font-size: 25px;
+    height: 40px;
+    overflow-y:auto;
+    margin: 15px 0 0 0;
+    font-family: 'Parisienne', cursive;
+    padding: 0 5px;
+
+}
+.box1 p{
+    line-height: 30px;
+    color: #051121;
+    font-family: 'Glory';
+}
+span{
+    font-weight: 600;
+}
+
+.details{
+    font-size: 18px;
+}
+.image{
+    width: 120px;
+    height: 160px;
+    background-image: url("Le-magasin-des-suicides.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #4F7CAC;
+    margin: 0px auto;
+    box-shadow: 1px 1px 3px #051121;
+
+}
+.imageLarge{
+    display: none;
+}
+#prix{
+    text-align: right;
+    padding: 0 15px 0 0;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #ba2b2e;
+    font-family: 'Glory';
+}
+
+
+/* ________________________ Result ______________________ */
+/* ____________________________________________________ */
+/* ________________________ Formulaire ___________________ */
+.formLivre{
+    width: 550px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px #00000097;
+    border-radius: 100px;
+    margin: auto;
+    padding: 30px 70px 40px;
+}
+.formLivre label{
+    display: block;
+    font-size: 1.1em;
+    margin: 0 0 10px;
+}
+.formLivre select, .formLivre input[type="text"]{
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid #ba2b2e;
+    color: rgba(0, 0, 0, 0.701);
+    background: none;
+    font-size: 1.2em;
+    /* border-radius: 5px; */
+    padding: 5px 20px;
+}
+
+div.searchButton{
+    display: inline-block;
+    border-radius: 100px;
+}
+.formLivre input[type="image"]{
+    width: 35px;
+    background: none;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+/* formulaire d'inscription */
+.fieldInscription{
+    width: 40%;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px #051121;
+    margin: 0px auto;
+}
+.fieldInscription legend{
+    color: #ba2b2e;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.fieldConnexion legend{
+    color: #ba2b2e;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+.formulaire{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 20px;
+
+}
+
+.formFlex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+.formFlex label{
+    font-size: 1em;
+    font-weight: 600;
+    color: #ba2b2e;
+    line-height: 40px;
+}
+.formFlex input{
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #ba2b2e;
+    border-right: 1px solid #ba2b2e;
+    color: #051121;
+}
+.formFlex input::placeholder{
+    font-style: italic;
+    font-size: 1em;
+    color: #051121;
+
+}
+.formRgpd{
+    margin: 10px 0 0 0;
+}
+.formRgpd input{
+    margin: 0 10px 0 0;
+}
+.boutonFlex{
+    display: flex;
+    justify-content:space-around;
+    width: 75%;
+    margin: 15px auto;
+}
+.boutonFlex div input{
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid #ba2b2e;
+    color: #ba2b2e;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 100px;
+    height: 35px
+}
+.boutonFlex div input:hover{
+    background-color: #ba2b2e;
+    color: #fff;
+}
+
+/* ________________________ Footer ___________________ */
+
+footer.footer
+{
+    margin: 25px 0 35px;
+    padding: 40px 360px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 13px;
+    background-color: #4F7CAC;
+    color: #eee;
+}
+
+div.reseaux a
+{
+    margin-left: 10px;
+}
+
+
+
+
+/* ---------------------------------------------------- */
+/* ____________________ Reponsive ____________________ */
+
+@media screen and (max-width: 1420px) {
+
+    /* HEADER */
+    header.header div.headerTop {
+        width: 920px;
+        height: 60px;
+    }
+    
+    header.header div.headerTop p {
+        font-size: 18px;
+    }
+
+    header.header div.headerLogo img {
+        height: 40px;
+    }
+
+    header.header div.headerPanier img {
+        height: 20px;
+        padding: 0 0 0 5px;
+    }
+
+    div.headerBottom{
+        padding-top: 60px ;
+    }
+
+    div.headerBanner{
+        height: 350px;
+        background-position: bottom;
+    }
+
+    div.burgerNav
+    {
+        display: none;
+    }
+
+    /* MAIN */
+    div.mainBack 
+    {
+        width: 920px;
+        padding: 15px 0;
+    }
+
+    div.mainGrid
+    {
+        gap: 10px;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    div.newsGrid
+    {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 400px);
+        background-size: cover;
+    }
+
+    div.twitterElement
+    {
+        height: 1615px;
+    }
+
+    /* ________________________ Result ___________________ */
+
+    /* Affichage livre */
+    .ajust{ width: 920px;}
+
+    fieldset{ width: 290px;}
+
+    h2{
+        color:#ba2b2e;
+        font-size: 18px;
+        height: 22px;
+    }
+
+    .details{ font-size: 14px;}
+
+    #prix{ font-size: 1.1em;}
+    /* ________________________ Result ______________________ */
+
+    /* FOOTER */
+
+    div.reseaux
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+
+    /* HEADER */
+    header.header div.headerTop {
+        width: 650px;
+    }
+
+    header.header div.headerLogo img {
+        height: 35px;
+    }
+
+    div.headerNav {
+        display: none;
+    }
+
+    div.headerBottom{
+        padding-top: 60px ;
+    }
+
+    div.headerBanner{
+        height: auto;
+        background: none;
+    }
+
+    div.burger label {
+        display: block;
+    }
+
+    div.burgerNav
+    {
+        display: block;
+    }
+
+    /* MAIN */
+    div.mainBack 
+    {
+        width: 650px;
+    }
+
+    div.mainGrid
+    {
+        gap: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    div.newsGrid
+    {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 300px);
+        background-size: cover;
+    }
+
+    div.twitterElement
+    {
+        display: none;
+    }
+
+    /* RESULT */
+    .image{
+        display: none;
+    }
+    .imageLarge{
+        display: block;
+        width: 120px;
+        height: 160px;
+        margin-right: 50px;
+        background-image: url("Le-magasin-des-suicides.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #4F7CAC;
+
+
+    }
+
+    .ajust{
+        width: 650px;
+    }
+
+    fieldset{
+        width: 650px;
+    }
+    .flex{
+        display: flex;
+        padding: 0 10px;
+    }
+
+    .box1:first-child
+    {
+       margin-right: 30px;
+    }
+
+    #prix{
+        padding: 0 40px 0 0;
+    }
+
+    .details{
+        display: flex;
+        width: 100%;
+    }
+}
+
+/* _____________________________________ */
+/* ____________ 720 ___________________ */
+
+@media screen and (max-width: 720px) {
+
+    header.header div.headerTop {
+        min-width: 360px;
+        justify-content: space-between;
+    }
+
+    div.headerNav {
+        display: none;
+    }
+
+    div.burger label {
+        display: block;
+    }
+    .imageLarge{
+        display: none;
+    }
+    .flex{
+        display: flex;
+        padding: 0 10px;
+    }
+    .ajust{
+        width: 100%;
+        padding: 0 10px;
+    }
+    fieldset{
+        width: 100%;
+    }
+
+    .box1:first-child
+    {
+       margin: 0 100px 0 30px;
+    }
+    
+
+    #prix{
+        padding: 0 40px 0 0;
+    }
+
+    .details{
+        display: flex;
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+    h2{
+        font-size: 25px;
+        height: 30px;
+        margin: 0;
+    }
+    
+}
+
+
+@media only screen and (max-width: 320px){
+    main{
+        width: 320px;
+        padding: 0 5px 0 5px;
+    }
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    #prix{
+        padding: 0 5px 0 0;
+    }
+    fieldset{
+        width : 320px;
+        padding: 0 5px;
+    }
+    .image{
+        margin: 0px auto;
+    }
+}
